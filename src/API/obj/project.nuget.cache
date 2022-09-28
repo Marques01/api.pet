@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "15zMFYRZpN0FH3kfUK9Xa7ArLB7dTeq83EprRWyBx6s49sy0PteCtp7Ufyae1puCOb2lLWDviacTEMaW/c+mjg==",
+  "dgSpecHash": "ICQ2sShv+607/gtaJilWSh4/hA9bTmPoyuKiC8E/QVtmuD63/vwRMxBSTUBsiwzjInM9HsJ6OKvJfoIaVcp64Q==",
   "success": true,
-  "projectFilePath": "D:\\Repositório\\Pet.API\\src\\API\\API.csproj",
+  "projectFilePath": "C:\\Users\\cleit\\OneDrive\\Área de Trabalho\\api.pet\\src\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cleit\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cleit\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.9\\microsoft.aspnetcore.cryptography.internal.6.0.9.nupkg.sha512",

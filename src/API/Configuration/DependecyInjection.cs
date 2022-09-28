@@ -8,6 +8,7 @@ namespace API.Configuration
         public static void RegisterDependencyInjection(IServiceCollection services)
         {
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }

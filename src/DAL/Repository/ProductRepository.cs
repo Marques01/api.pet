@@ -1,10 +1,19 @@
 ﻿using BLL.Models;
 using BLL.Repository.Interfaces;
+using DAL.Context;
+using System.Reflection.Metadata;
 
 namespace DAL.Repository
 {
     public class ProductRepository : IProductRepository
     {
+        private ApplicationDbContext _context;
+
+        public ProductRepository(ApplicationDbContext context)
+        {
+            _context = context;
+        }
+
         public Task Create(Product model)
         {
             throw new NotImplementedException();
