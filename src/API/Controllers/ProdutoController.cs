@@ -31,6 +31,8 @@ namespace API.Controllers
         {
             await _uof.ProductRepository.CreateAsync(product);
 
+            await _uof.CommitAsync();
+
             return Ok();
         }        
     }
