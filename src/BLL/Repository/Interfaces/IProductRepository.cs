@@ -4,18 +4,16 @@ namespace BLL.Repository.Interfaces
 {
     public interface IProductRepository
     {
-        Task Create(Product model);
+        Task CreateAsync(Product model);
 
-        Task Update(Product model);
+        void Update(Product model);
 
-        Task Delete(Product model);
+        void Delete(Product model);
 
-        Task<Product> GetById(Product model);
+        Product GetById(Guid id);
 
-        Task<Product> GetByName(Product model);
+        Task<IEnumerable<Product>> GetByName(string name);
 
-        Task<IEnumerable<Product>> GetAll();
-
-        Task<IEnumerable<Product>> GetByCategory(Guid categoryId);
+        Task<IEnumerable<Product>> GetProductsAsync();
     }
 }

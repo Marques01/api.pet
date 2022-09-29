@@ -1,4 +1,5 @@
-﻿using BLL.Repository.Interfaces;
+﻿using BLL.Models;
+using BLL.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
@@ -13,5 +14,24 @@ namespace API.Controllers
         {
             _uof = uof;
         }
+
+        [HttpGet]
+        public async Task<ActionResult> Products()
+        {
+            var products = await _uof.ProductRepository.GetProductsAsync();
+
+            if (products.Count() > 0)
+                return Ok(products);
+
+            return NoContent();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Create([FromBody] Product product)
+        {
+            await _uof.ProductRepository.CreateAsync(product);
+
+            return Ok();
+        }        
     }
 }

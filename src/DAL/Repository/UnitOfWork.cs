@@ -1,6 +1,5 @@
 ﻿using BLL.Repository.Interfaces;
 using DAL.Context;
-using System.Reflection.Metadata;
 
 namespace DAL.Repository
 {
@@ -13,8 +12,22 @@ namespace DAL.Repository
             _context = context;
 
             ProductRepository = new ProductRepository(_context);
+
+            CategoryProductRepository = new CategoryProductRepository(_context);
         }
 
         public IProductRepository ProductRepository { get; }
+
+        public ICategoryProductRepository CategoryProductRepository { get; }
+
+        public async Task CommitAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DisposeAsync()
+        {
+            await _context.DisposeAsync();
+        }
     }
 }

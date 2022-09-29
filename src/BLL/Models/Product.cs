@@ -24,11 +24,15 @@ namespace BLL.Models
 
         public ICollection<Category> Categories { get; set; }
 
+        public ICollection<CategoryProduct> CategoriesProducts { get; set; }
+
         public Product()
         {
             _productId = Guid.NewGuid();
 
             Categories = new Collection<Category>();
+
+            CategoriesProducts = new Collection<CategoryProduct>();
         }
     }
 }

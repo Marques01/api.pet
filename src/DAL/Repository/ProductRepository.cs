@@ -1,7 +1,7 @@
 ﻿using BLL.Models;
 using BLL.Repository.Interfaces;
 using DAL.Context;
-using System.Reflection.Metadata;
+using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Repository
 {
@@ -14,39 +14,96 @@ namespace DAL.Repository
             _context = context;
         }
 
-        public Task Create(Product model)
+        public async Task CreateAsync(Product model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                await _context.Products.AddAsync(model);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Não foi possivel cadastrar o produto\n{ex.Message}");
+            }
         }
 
-        public Task Delete(Product model)
+        public void Delete(Product model)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Products.Remove(model);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Não foi possivel deletar o produto\n{ex.Message}");
+            }
         }
 
-        public Task<IEnumerable<Product>> GetAll()
+        public async Task<IEnumerable<Product>> GetProductsAsync()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var products = await _context.Products!.AsNoTracking().ToListAsync();
+
+                if (products != null)
+                    return products;
+
+                return Enumerable.Empty<Product>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Não foi possivel obter a lista de produtos\n{ex.Message}");
+            }
         }
 
-        public Task<IEnumerable<Product>> GetByCategory(Guid categoryId)
+        public Product GetById(Guid id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var product = _context.Products
+                    .AsNoTracking()
+                    .FirstOrDefault(x => x.ProductId.Equals(id));
+
+                if (product != null)
+                    return product;
+
+                return new Product();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Não foi possivel buscar o produto pelo id\n{ex.Message}");
+            }
         }
 
-        public Task<Product> GetById(Product model)
+        public async Task<IEnumerable<Product>> GetByName(string name)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var products = await _context.Products
+                    .AsNoTracking()
+                    .Where(x => x.Name.Contains(name))
+                    .ToListAsync();
+
+                if (products != null)
+                    return products;
+
+                return Enumerable.Empty<Product>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Não foi possivel obter os produtos pelo nome\n{ex.Message}");
+            }
         }
 
-        public Task<Product> GetByName(Product model)
+        public void Update(Product model)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task Update(Product model)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                _context.Products.Update(model);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Não foi possivel atualizar a o produto\n{ex.Message}");
+            }
         }
     }
 }

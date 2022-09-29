@@ -7,13 +7,20 @@ namespace DAL.Context
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
     {
-        public DbSet<Product>? Products { get; set; }
+        public DbSet<Product> Products { get; set; }
 
-        public DbSet<Category>? Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
+
+        public DbSet<CategoryProduct> CategoriesProducts { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
         {
+            Products = Set<Product>();
+
+            Categories = Set<Category>();
+
+            CategoriesProducts = Set<CategoryProduct>();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
