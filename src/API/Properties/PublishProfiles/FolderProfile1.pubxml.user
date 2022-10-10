@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\publish\pet.api</_PublishTargetUrl>
+    <History>True|2022-10-09T22:11:20.0369960Z;True|2022-10-09T18:52:27.7707472-03:00;True|2022-10-09T18:47:29.3670222-03:00;True|2022-10-09T18:37:48.8670521-03:00;True|2022-10-09T17:50:49.8289828-03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

@@ -21,11 +21,18 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors(x =>
+x.AllowAnyMethod()
+.AllowAnyHeader()
+.WithExposedHeaders("*")
+.AllowAnyOrigin()
+.AllowCredentials());
 
 app.UseHttpsRedirection();
 
