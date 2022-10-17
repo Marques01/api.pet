@@ -550,23 +550,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cleit\\.nuget\\packages\\": {},
+    "C:\\Users\\cleiton.marques\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cleit\\OneDrive\\Área de Trabalho\\api.pet\\src\\BLL\\BLL.csproj",
+      "projectUniqueName": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\BLL\\BLL.csproj",
       "projectName": "BLL",
-      "projectPath": "C:\\Users\\cleit\\OneDrive\\Área de Trabalho\\api.pet\\src\\BLL\\BLL.csproj",
-      "packagesPath": "C:\\Users\\cleit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cleit\\OneDrive\\Área de Trabalho\\api.pet\\src\\BLL\\obj\\",
+      "projectPath": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\BLL\\BLL.csproj",
+      "packagesPath": "C:\\Users\\cleiton.marques\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cleit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cleiton.marques\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -575,7 +575,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -615,7 +614,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-rc.1.22431.12\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
