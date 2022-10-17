@@ -23,7 +23,7 @@ namespace API.Controllers
             if (products.Count() > 0)
                 return Ok(products);
 
-            return NoContent();
+            return Ok();
         }
 
         [HttpGet]
@@ -35,7 +35,7 @@ namespace API.Controllers
             if (products.Count() > 0)
                 return Ok(products);
 
-            return Ok(products);
+            return Ok();
         }
 
         [HttpGet]
