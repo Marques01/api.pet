@@ -1,17 +1,9 @@
 using API.Configuration;
-using DAL.Context;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDefaultIdentity<IdentityUser<Guid>>(options => options.SignIn.RequireConfirmedAccount = true)
-        .AddEntityFrameworkStores<ApplicationDbContext>();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-
+DatabaseConfiguration.ConfigureConnection(builder.Services, builder.Configuration);
 DependecyInjection.RegisterDependencyInjection(builder.Services);
 IdentityConfiguration.RegisterConfiguretion(builder.Services);
 

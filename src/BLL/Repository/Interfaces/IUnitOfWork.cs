@@ -4,6 +4,8 @@
     {
         public IProductRepository ProductRepository { get; }
 
+        public ICategoryRepository CategoryRepository { get; }
+
         public ICategoryProductRepository CategoryProductRepository { get; }
 
         Task CommitAsync();

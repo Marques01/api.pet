@@ -14,7 +14,11 @@ namespace DAL.Repository
             ProductRepository = new ProductRepository(_context);
 
             CategoryProductRepository = new CategoryProductRepository(_context);
+
+            CategoryRepository = new CategoryRepository(_context);
         }
+
+        public ICategoryRepository CategoryRepository { get; }
 
         public IProductRepository ProductRepository { get; }
 
