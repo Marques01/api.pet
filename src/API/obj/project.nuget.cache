@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "FIDmMaZcqiY+6nNYLgfYeeGDgk0HuUjn4DrVZDb2yq2mS2V/WlxB7UtpqDsiS8EsIPgPqyz4wKyRR3vaeZ8m9w==",
   "success": true,
   "projectFilePath": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\API\\API.csproj",
+=======
+  "dgSpecHash": "U25/BB6j3C7NNvANL+EbUxdvjfCa2TqAqzc97gZnhT43yN7CQC+Zeafc8hcLETkQd5E2lpWMkCbZvCkoD2Zs6w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\API\\API.csproj",
+>>>>>>> fc0ff130e79c49700855eb87fea7fe703dd23711
   "expectedPackageFiles": [
     "C:\\Users\\cleiton.marques\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\cleiton.marques\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.9\\microsoft.aspnetcore.cryptography.internal.6.0.9.nupkg.sha512",
