@@ -26,6 +26,42 @@ namespace API.Controllers
             return NoContent();
         }
 
+        [HttpGet]
+        [Route("name")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetByName([FromQuery] string name)
+        {
+            var products = await _uof.ProductRepository.GetByName(name);
+
+            if (products.Count() > 0)
+                return Ok(products);
+
+            return NotFound(products);
+        }
+
+        [HttpGet]
+        [Route("price")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetByPricing(decimal price)
+        {
+            var products = await _uof.ProductRepository.GetByPricing(price);
+
+            if (products.Count() > 0)
+                return Ok(products);
+
+            return NotFound();
+        }
+
+        [HttpGet]
+        [Route("category")]
+        public async Task<ActionResult<IEnumerable<Product>>> GetByCategory(Guid id)
+        {
+            var products = await _uof.ProductRepository.GetByCategory(id);
+
+            if (products.Count() > 0)
+                return Ok(products);
+
+            return NotFound();
+        }
+
         [HttpPost]
         public async Task<ActionResult> Create([FromBody] Product product)
         {
@@ -33,7 +69,27 @@ namespace API.Controllers
 
             await _uof.CommitAsync();
 
-            return Ok();
-        }        
+            return Ok(product);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> Update([FromBody] Product product)
+        {
+            _uof.ProductRepository.Update(product);
+
+            await _uof.CommitAsync();
+
+            return Ok(product);
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult> Delete([FromBody] Product product)
+        {
+            _uof.ProductRepository.Delete(product);
+
+            await _uof.CommitAsync();
+
+            return Ok(product);
+        }
     }
 }

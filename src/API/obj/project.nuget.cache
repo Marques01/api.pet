@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U25/BB6j3C7NNvANL+EbUxdvjfCa2TqAqzc97gZnhT43yN7CQC+Zeafc8hcLETkQd5E2lpWMkCbZvCkoD2Zs6w==",
+  "dgSpecHash": "TkkdBdCclspMc4OZrqCbwDQjY4BUhLEHGUYu0+xIqmQ5zLeH0gBcekIwJJwcmMhNtxtH21ySQyFb6LfkcCMAzA==",
   "success": true,
   "projectFilePath": "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,8 @@
     "C:\\Users\\cleiton.marques\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\cleiton.marques\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\cleiton.marques\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\cleiton.marques\\.nuget\\packages\\mysqlconnector\\2.1.2\\mysqlconnector.2.1.2.nupkg.sha512",
+    "C:\\Users\\cleiton.marques\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\6.0.2\\pomelo.entityframeworkcore.mysql.6.0.2.nupkg.sha512",
     "C:\\Users\\cleiton.marques\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\cleiton.marques\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\cleiton.marques\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

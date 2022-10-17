@@ -10,7 +10,7 @@ builder.Services.AddDefaultIdentity<IdentityUser<Guid>>(options => options.SignI
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 DependecyInjection.RegisterDependencyInjection(builder.Services);
 IdentityConfiguration.RegisterConfiguretion(builder.Services);
@@ -31,7 +31,7 @@ app.UseCors(x =>
 x.AllowAnyMethod()
 .AllowAnyHeader()
 .WithExposedHeaders("*")
-.AllowAnyOrigin()
+.SetIsOriginAllowed(x => true)
 .AllowCredentials());
 
 app.UseHttpsRedirection();

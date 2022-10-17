@@ -42,7 +42,11 @@ namespace DAL.Repository
         {
             try
             {
-                var products = await _context.Products!.AsNoTracking().ToListAsync();
+                var products = await _context.Products!
+                    .AsNoTracking()
+                    .Include(x => x.CategoriesProducts)
+                    .Include(x => x.Categories)
+                    .ToListAsync();
 
                 if (products != null)
                     return products;
@@ -61,6 +65,8 @@ namespace DAL.Repository
             {
                 var product = _context.Products
                     .AsNoTracking()
+                    .Include(x => x.CategoriesProducts)
+                    .Include(x => x.Categories)
                     .FirstOrDefault(x => x.ProductId.Equals(id));
 
                 if (product != null)
@@ -80,6 +86,8 @@ namespace DAL.Repository
             {
                 var products = await _context.Products
                     .AsNoTracking()
+                    .Include(x => x.CategoriesProducts)
+                    .Include(x => x.Categories)
                     .Where(x => x.Name.Contains(name))
                     .ToListAsync();
 
@@ -130,6 +138,7 @@ namespace DAL.Repository
                 var products = await _context.CategoriesProducts
                     .Where(x => x.CategoryId.Equals(id))
                     .Include(x => x.Product)
+                    .Include(x => x.Category)
                     .ToListAsync();
 
                 if (products != null)
