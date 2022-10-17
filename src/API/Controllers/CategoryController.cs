@@ -12,6 +12,17 @@ namespace API.Controllers
         public CategoryController(IUnitOfWork uof)
         {
             _uof = uof;
-        }       
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> GetCategories()
+        {
+            var categories = await _uof.CategoryRepository.GetCategories();
+
+            if (categories.Count() > 0)
+                return Ok(categories);
+
+            return Ok();
+        }
     }
 }
