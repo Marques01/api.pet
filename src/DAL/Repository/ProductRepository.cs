@@ -105,5 +105,42 @@ namespace DAL.Repository
                 throw new Exception($"Não foi possivel atualizar a o produto\n{ex.Message}");
             }
         }
+
+        public async Task<IEnumerable<Product>> GetByPricing(decimal price)
+        {
+            try
+            {
+                var products = await _context.Products.Where(x => x.Price.Equals(price)).ToListAsync();
+
+                if (products != null)
+                    return products;
+
+                return Enumerable.Empty<Product>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Não foi possivel buscar os produtos pelo preço\n{ex.Message}");
+            }
+        }
+
+        public async Task<IEnumerable<CategoryProduct>> GetByCategory(Guid id)
+        {
+            try
+            {
+                var products = await _context.CategoriesProducts
+                    .Where(x => x.CategoryId.Equals(id))
+                    .Include(x => x.Product)
+                    .ToListAsync();
+
+                if (products != null)
+                    return products;
+
+                return Enumerable.Empty<CategoryProduct>();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Não foi possivel buscar os produtos pela categoria\n{ex.Message}");
+            }
+        }
     }
 }

@@ -15,5 +15,9 @@ namespace BLL.Repository.Interfaces
         Task<IEnumerable<Product>> GetByName(string name);
 
         Task<IEnumerable<Product>> GetProductsAsync();
+
+        Task<IEnumerable<Product>> GetByPricing(decimal price);
+
+        Task<IEnumerable<CategoryProduct>> GetByCategory(Guid id);        
     }
 }
