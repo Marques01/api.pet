@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\DAL\\DAL.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\BLL\\BLL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\BLL\\BLL.csproj",
-        "projectName": "BLL",
-        "projectPath": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\cleiton.marques\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\BLL\\obj\\",
-=======
     "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\DAL\\DAL.csproj": {}
   },
   "projects": {
@@ -25,7 +12,6 @@
         "projectPath": "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\BLL\\BLL.csproj",
         "packagesPath": "C:\\Users\\cleiton.marques\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\BLL\\obj\\",
->>>>>>> fc0ff130e79c49700855eb87fea7fe703dd23711
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -83,16 +69,6 @@
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\DAL\\DAL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\DAL\\DAL.csproj",
-        "projectName": "DAL",
-        "projectPath": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\cleiton.marques\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\DAL\\obj\\",
-=======
     "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -101,7 +77,6 @@
         "projectPath": "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\DAL\\DAL.csproj",
         "packagesPath": "C:\\Users\\cleiton.marques\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\DAL\\obj\\",
->>>>>>> fc0ff130e79c49700855eb87fea7fe703dd23711
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -122,13 +97,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\BLL\\BLL.csproj": {
-                "projectPath": "C:\\Users\\cleiton.marques\\Desktop\\api.pet\\src\\BLL\\BLL.csproj"
-=======
               "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\BLL\\BLL.csproj": {
                 "projectPath": "C:\\Users\\cleiton.marques\\Documents\\api.pet\\src\\BLL\\BLL.csproj"
->>>>>>> fc0ff130e79c49700855eb87fea7fe703dd23711
               }
             }
           }
@@ -165,15 +135,19 @@
               "target": "Package",
               "version": "[6.0.9, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.9, )"
-            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.9, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
             }
           },
           "imports": [
